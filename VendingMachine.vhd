@@ -3,12 +3,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity VendingMachine is
 port(
-				  a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2: out std_logic; --2 adad 7-segment baraye namayesh meghdar poole vared shode.
-														a3, b3, c3, d3, e3, f3, g3: out std_logic; -- 7-segment baraye namayesh shomare mahsoole mored nazar.
-																				clk, rst: in std_logic;
-																					  sel: in std_logic_vector(1 downto 0);
-												  nickel_in, dime_in, quarter_in: in boolean;
-candy1_out, candy2_out, candy3_out, candy4_out, nickel_out, dime_out: out std_logic
+a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2: out std_logic; --Two 7-segments for state number.
+a3, b3, c3, d3, e3, f3, g3: out std_logic; -- One 7-segment for product number selection.
+clk, rst: in std_logic; -- Clock and Reset.
+sel: in std_logic_vector(1 downto 0); -- Product selector. Product 1 is 10 cents, product 2 is 15 cents, product 3 is 20 cents and product 4 is 25 cents.
+nickel_in, dime_in, quarter_in: in boolean; --Nickel is 5 cents, dime is 10 cents, quarter is 25 cents.
+candy1_out, candy2_out, candy3_out, candy4_out, nickel_out, dime_out: out std_logic -- candy out and money out.
 	  );
 end VendingMachine;
 
